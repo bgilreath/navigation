@@ -1,0 +1,7 @@
+clear_costmap_recovery:
+  reset_distance: 3.0
+  force_updating: false
+  affected_maps: "both"
+  layer_names: 
+   - "obstacles"
+   

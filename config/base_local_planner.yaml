@@ -1,0 +1,137 @@
+#The absolute value of the maximum translational velocity for the robot in m/s
+#range: 
+max_vel_trans: 0.55
+#The absolute value of the minimum translational velocity for the robot in m/s
+#range: 
+min_vel_trans: 0.1
+
+#The maximum x velocity for the robot in m/s
+#range: 
+max_vel_x: 0.55
+#The minimum x velocity for the robot in m/s
+#range: 
+min_vel_x: 0.0
+
+#The maximum y velocity for the robot in m/s
+#range: 
+max_vel_y: 0.1
+#The minimum y velocity for the robot in m/s
+#range: 
+min_vel_y: -0.1
+
+#The absolute value of the maximum rotational velocity for the robot in rad/s
+#range: 
+max_vel_theta: 1.0
+#The absolute value of the minimum rotational velocity for the robot in rad/s
+#range: 
+min_vel_theta: 0.4
+
+#The acceleration limit of the robot in the x direction
+#range: 0 to 20.0
+acc_lim_x: 2.5
+#The acceleration limit of the robot in the y direction
+#range: 0 to 20.0
+acc_lim_y: 2.5
+#The acceleration limit of the robot in the theta direction
+#range: 0 to 20.0
+acc_lim_theta: 3.2
+
+#NOT PARAMETERIZED
+#The absolute value of the maximum translational acceleration for the robot in m/s^2
+#range: 
+acc_lim_trans: 0.1
+
+#Start following closest point of global plan, not first point (if different).
+#range: 
+prune_plan: false
+
+#Within what maximum distance we consider the robot to be in goal
+#range: 
+xy_goal_tolerance: 0.1
+#Within what maximum angle difference we consider the robot to face goal direction
+#range: 
+yaw_goal_tolerance: 0.1
+
+#Below what maximum velocity we consider the robot to be stopped in translation
+#range: 
+trans_stopped_vel: 0.1
+#Below what maximum rotation velocity we consider the robot to be stopped in rotation
+#range: 
+theta_stopped_vel: 0.1
+
+
+
+
+
+#The amount of time to roll trajectories out for in seconds
+#range: 0 to 10
+sim_time: 1.7
+#The granularity with which to check for collisions along each trajectory in meters
+#range: 0 to 5
+sim_granularity: 0.025
+#The distance between simulation points for angular velocity should be small enough that the robot doesn't hit things
+#range: 0 to pi/2
+angular_sim_granularity: 0.025
+
+#The weight for the path distance part of the cost function
+#range: 0 to 5
+path_distance_bias: 0.6
+#The weight for the goal distance part of the cost function
+#range: 0 to 5
+goal_distance_bias: 0.8
+#The weight for the obstacle distance part of the cost function
+#range: 0 to 5
+occdist_scale: 0.01
+
+#The distance the robot must travel before oscillation flags are reset, in meters
+#range: 0 to 5
+oscillation_reset_dist: 0.05
+#The distance the robot must travel before oscillation flags are reset, in meters
+#range: 0 to 5
+escape_reset_dist: 0.10
+#The distance the robot must travel before oscillation flags are reset, in meters
+#range: 0 to 5
+escape_reset_theta: pi/2
+
+#The number of samples to use when exploring the x velocity space
+#range: 1 to 300
+vx_samples: 20
+#The number of samples to use when exploring the theta velocity space
+#range: 1 to 300
+vtheta_samples: 20
+
+#How far the robot should look ahead of itself when differentiating between different rotational velocities
+#range: 0 to 5
+heading_lookahead: 0.325
+
+#Set this to true if the robot being controlled can take y velocities and false otherwise
+#range: True or False
+holonomic_robot: true
+
+#The velocity to use while backing up
+#range: -2 to 2
+escape_vel: -0.1
+
+#Set this to true to use the Dynamic Window Approach, false to use acceleration limits
+#range: True to False
+dwa: false
+
+#Set this to true to use the Dynamic Window Approach, false to use acceleration limits
+#range: True to False
+heading_scoring: false
+#How far to look ahead in time when we score heading based trajectories
+#range: 0 to 1
+heading_scoring_timestep: 0.1
+
+#Set this to true to allow simple attraction to a goal point instead of intelligent cost propagation
+#range: True to False
+simple_attractor: false
+
+#A comma delimited list of the y velocities the controller will explore
+y_vels: "-0.3,-0.1,0.1,-0.3"
+
+#Restore to the default configuration
+#range: True to False
+restore_defaults: false
+
+
