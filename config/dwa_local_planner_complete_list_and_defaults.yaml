@@ -1,0 +1,70 @@
+#adds generic local planner parameters
+#The amount of time to roll trajectories out for in seconds
+#range: 0 to inf
+sim_time: 1.7
+#The granularity with which to check for collisions along each trajectory in meters
+#range: 0 to inf
+sim_granularity: 0.025
+#The granularity with which to check for collisions for rotations in radians
+#range: 0 to inf
+angular_sim_granularity: 0.1
+
+#The weight for the path distance part of the cost function
+#range: 0.0 to inf
+path_distance_bias: 0.6
+#The weight for the goal distance part of the cost function
+#range: 0.0 to inf
+goal_distance_bias: 0.8
+#The weight for the obstacle distance part of the cost function
+#range: 0.0 to inf
+occdist_scale: 0.01
+#The weight for penalizing any changes in robot heading
+#range: 0.0 to inf
+twirling_scale: 0.0
+
+#The amount of time that the robot must stop before a collision in order for a trajectory to be considered valid in seconds
+#range: 0 to inf
+stop_time_buffer: 0.2
+#The distance the robot must travel before oscillation flags are reset, in meters
+#range: 0 to inf
+oscillation_reset_dist: 0.05
+#The angle the robot must turn before oscillation flags are reset, in radians
+#range: 0 to inf
+oscillation_reset_angle: 0.2
+
+#The distance from the center point of the robot to place an additional scoring point, in meters
+#range: 0 to inf
+forward_point_distance: 0.325
+
+#The absolute value of the velocity at which to start scaling the robot's footprint, in m/s
+#range: 0 to inf
+scaling_speed: 0.25
+#The maximum factor to scale the robot's footprint by
+#range: 0 to inf
+max_scaling_factor: 0.2
+
+#The number of samples to use when exploring the x velocity space
+#range: 1 to inf
+vx_samples: 3
+#The number of samples to use when exploring the y velocity space
+#range: 1 to inf
+vy_samples: 10
+#The number of samples to use when exploring the theta velocity space
+#range: 1 to inf
+vth_samples: 20
+
+#Use dynamic window approach to constrain sampling velocities to small window.
+#range: True to False
+use_dwa: true)
+
+#Restore to the original configuration.
+#range: True to False
+restore_defaults: false)
+
+sum_scores: false
+publish_cost_grid_pc: false
+global_frame_id: "odom"
+publish_traj_pc: false
+cheat_factor: 1.0
+
+

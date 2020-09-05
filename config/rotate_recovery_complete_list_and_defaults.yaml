@@ -1,0 +1,9 @@
+sim_granularity: 0.017
+frequency: 20.0
+
+acc_lim_theta: 3.2
+max_vel_theta: 1.0
+min_in_place_vel_theta: 0.4
+
+yaw_goal_tolerance: 0.10
+
